@@ -101,7 +101,7 @@ export const projects: Project[] = [
     status: "développement",
     genre: "Documentaire de création",
     year: "2026",
-    photo: "https://images.unsplash.com/photo-1580193813605-a5c91dc7d0d8?w=800&h=600&fit=crop&q=80",
+    photo: "/films/etincelle-los-angeles.jpg",
     synopsis: {
       fr: "Janvier 2025. Los Angeles brûle. Le Palisades Fire devient l'un des incendies les plus meurtriers de l'histoire de la ville. Neuf mois plus tard, le principal suspect est un Français de 29 ans : Jonathan Rinderknecht, ancien chauffeur Uber, fils de missionnaires évangélistes installés dans le Var. À partir du 8 juin 2026, il comparaît devant la justice fédérale américaine. Le documentaire suit le procès à Los Angeles, entre accusation, défense et victimes, et mène parallèlement une enquête en France, auprès de l'entourage familial et religieux du suspect à Hyères. Comment un homme ordinaire devient-il, en quelques mois, l'un des accusés les plus exposés des États-Unis ?",
       en: "January 2025. Los Angeles burns. The Palisades Fire becomes one of the deadliest in the city's history. Nine months later, the prime suspect is a 29-year-old Frenchman: Jonathan Rinderknecht, a former Uber driver and son of evangelical missionaries based in the Var region of southern France. From June 8, 2026, he stands trial before a US federal court. The documentary follows the proceedings in Los Angeles, between prosecution, defense and victims, while conducting a parallel investigation in France, in the family and religious circles of the suspect in Hyères. How does an ordinary man become, in a matter of months, one of the most scrutinized defendants in the United States?",

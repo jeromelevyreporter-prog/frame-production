@@ -1,26 +1,135 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Frame Production palette — inspired by the logo */
+  --navy: #1e2a4a;
+  --navy-deep: #131c33;
+  --red: #c8102e;
+  --sky: #a8c0dc;
+  --sky-soft: #d8e3ee;
+  --cream: #faf8f3;
+  --paper: #ffffff;
+  --ink: #0d1424;
+  --muted: #6b7080;
+
+  --background: var(--cream);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-red: var(--red);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+/* Hero ambient gradient — inspired by partizan but in Frame's palette */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 90%, rgba(168, 192, 220, 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 60% at 70% 20%, rgba(200, 16, 46, 0.18) 0%, transparent 55%),
+    linear-gradient(180deg, #131c33 0%, #1e2a4a 50%, #2a3a5e 100%);
+}
+
+/* Subtle film-grain effect (optional, very light) */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: overlay;
+}
+
+/* Typography helpers — all headings use Inter (matches navbar typography) */
+.font-display {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.heading-xl {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+/* Smooth links */
+a {
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* Image cover protection */
+.cover-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom scrollbar (subtle) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sky);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy);
+}
+
+/* Utility: prose width for editorial paragraphs */
+.prose-frame {
+  max-width: 720px;
+}
+
+.container-frame {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-frame {
+    padding-inline: 2.5rem;
+  }
 }

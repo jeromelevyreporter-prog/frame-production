@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# invoices and personal documents (do not commit)
+Facture*.pdf
+*.invoice.pdf
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

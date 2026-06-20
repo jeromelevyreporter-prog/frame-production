@@ -96,6 +96,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "etincelle-los-angeles",
+    title: "L'Étincelle : le Français qui a embrasé Los Angeles",
+    status: "développement",
+    genre: "Documentaire",
+    year: "2025",
+    photo: "https://images.unsplash.com/photo-1580193813605-a5c91dc7d0d8?w=800&h=600&fit=crop&q=80",
+    synopsis: {
+      fr: "Janvier 2025, Los Angeles brûle. Neuf mois plus tard, le principal suspect du Palisades Fire est un jeune Français de 29 ans, fils de pasteur évangélique du Var. Le documentaire croise le suivi du procès à Los Angeles avec une enquête menée en France, dans l'entourage familial et religieux du suspect à Hyères, pour comprendre comment un homme ordinaire devient en quelques mois l'un des accusés les plus exposés des États-Unis.",
+      en: "January 2025, Los Angeles is burning. Nine months later, the main suspect in the Palisades Fire is a 29-year-old Frenchman, son of an evangelical pastor from the Var. The documentary weaves the trial proceedings in Los Angeles with an investigation conducted in France, in the family and religious circles of the suspect in Hyères, to understand how an ordinary man becomes, in a matter of months, one of the most high-profile defendants in the United States.",
+    },
+    lookingFor: {
+      fr: "Diffuseur et partenaires de coproduction",
+      en: "Broadcaster and co-production partners",
+    },
+  },
+  {
     slug: "face-cachee-ia",
     title: "La face cachée de l'intelligence artificielle",
     status: "développement",

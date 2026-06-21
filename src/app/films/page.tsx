@@ -1,48 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { useI18n } from "@/lib/i18n-context";
 import { films, projects, directors, type Film, type Project, type Director } from "@/lib/data";
 import { FadeIn } from "@/components/FadeIn";
 
 function DirectorCard({ director, index }: { director: Director; index: number }) {
-  const { locale } = useI18n();
-  const [photoFailed, setPhotoFailed] = useState(false);
-  const showPhoto = director.photo && !photoFailed;
-
   return (
     <FadeIn delay={Math.min(index * 0.1, 0.3)}>
-      <div>
-        <div
-          className="relative aspect-[3/4] mb-4 rounded-lg overflow-hidden"
-          style={
-            showPhoto
-              ? undefined
-              : {
-                  background: `linear-gradient(${145 + index * 25}deg, var(--navy-deep) 0%, var(--navy) 50%, ${
-                    index % 2 === 0 ? "rgba(168,192,220,0.3)" : "rgba(200,16,46,0.2)"
-                  } 100%)`,
-                }
-          }
-        >
-          {showPhoto ? (
-            <Image
-              src={director.photo!}
-              alt={director.name}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover"
-              onError={() => setPhotoFailed(true)}
-            />
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center text-paper/20 font-display text-7xl md:text-8xl">
-              {director.name.split(" ").map((s) => s[0]).join("").slice(0, 2)}
-            </div>
-          )}
-        </div>
-        <h3 className="font-display text-xl md:text-2xl text-ink mb-2">{director.name}</h3>
-        <p className="text-ink/70 text-sm md:text-base leading-relaxed text-justify">{director.bio[locale]}</p>
+      <div className="border-t border-ink/10 py-4">
+        <h3 className="font-display text-xl md:text-2xl text-ink">{director.name}</h3>
       </div>
     </FadeIn>
   );

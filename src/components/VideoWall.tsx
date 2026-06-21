@@ -9,6 +9,8 @@ type Tile = {
   title: string;
   year: string;
   videoSrc?: string;
+  /** Static image; takes priority over videoSrc when present */
+  imageSrc?: string;
   /** Combined classes for grid placement (mobile + desktop) */
   span: string;
   /** Fallback gradient so empty tiles aren't ugly */
@@ -24,7 +26,7 @@ const tiles: Tile[] = [
   {
     slug: "marseille-pagnol-netflix",
     title: "Marseille, de Pagnol à Netflix",
-    year: "2024",
+    year: "2026",
     videoSrc: "/videos/marseille-pagnol-netflix.mp4",
     span: "col-span-2 row-span-2 md:col-span-2 md:row-span-3",
     gradient: "linear-gradient(135deg, #1e2a4a 0%, #c8102e 100%)",
@@ -48,7 +50,7 @@ const tiles: Tile[] = [
   {
     slug: "maxime-frederic",
     title: "Maxime Frédéric : le chef du Cheval Blanc",
-    year: "2024",
+    year: "2025",
     videoSrc: "/videos/maxime-frederic.mp4",
     span: "col-span-1 row-span-2 md:col-span-2 md:row-span-2",
     gradient: "linear-gradient(180deg, #a8c0dc 0%, #1e2a4a 100%)",
@@ -57,14 +59,14 @@ const tiles: Tile[] = [
     slug: "chambon-sur-lignon",
     title: "Le Chambon-sur-Lignon, un legs pour l'Histoire",
     year: "2023",
-    videoSrc: "/videos/chambon-sur-lignon.mp4",
+    imageSrc: "/films/chambon-sur-lignon.jpg",
     span: "col-span-1 row-span-2 md:col-span-2 md:row-span-2",
     gradient: "linear-gradient(220deg, #131c33 0%, #c8102e 100%)",
   },
   {
     slug: "surtourisme-provence",
     title: "Surtourisme : la Provence peut-elle accueillir toute la richesse du monde ?",
-    year: "2024",
+    year: "2025",
     videoSrc: "/videos/surtourisme-provence.mp4",
     span: "col-span-2 row-span-2 md:col-span-4 md:row-span-2",
     gradient: "linear-gradient(90deg, #1e2a4a 0%, #a8c0dc 50%, #c8102e 100%)",
@@ -74,6 +76,10 @@ const tiles: Tile[] = [
 function VideoTile({ tile }: { tile: Tile }) {
   const [hovered, setHovered] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
+  const [imageFailed, setImageFailed] = useState(false);
+
+  const showImage = tile.imageSrc && !imageFailed;
+  const showVideo = !showImage && tile.videoSrc && !videoFailed;
 
   return (
     <Link
@@ -83,7 +89,16 @@ function VideoTile({ tile }: { tile: Tile }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {tile.videoSrc && !videoFailed && (
+      {showImage && (
+        <img
+          src={tile.imageSrc}
+          alt={tile.title}
+          onError={() => setImageFailed(true)}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      )}
+
+      {showVideo && (
         <video
           src={tile.videoSrc}
           autoPlay
@@ -96,8 +111,8 @@ function VideoTile({ tile }: { tile: Tile }) {
         />
       )}
 
-      {/* Empty-state label when no video yet */}
-      {(videoFailed || !tile.videoSrc) && (
+      {/* Empty-state label when no media yet */}
+      {!showImage && !showVideo && (
         <div className="absolute inset-0 flex items-center justify-center text-paper/40 text-xs uppercase tracking-widest p-6 text-center">
           {tile.title}
         </div>

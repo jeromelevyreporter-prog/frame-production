@@ -15,10 +15,11 @@ export const films: Film[] = [
   {
     slug: "marseille-pagnol-netflix",
     title: "De Pagnol à Netflix : Marseille, le mythe du rêve hollywoodien",
-    year: "2024",
+    year: "2026",
     duration: "52 min",
     broadcaster: "France 3 PACA",
     director: "Audrey Avram",
+    coproduction: "Nova Production",
     synopsis: {
       fr: "Marseille n'est pas Hollywood. C'est pire. C'est plus brûlant. Depuis Pagnol jusqu'à Netflix, la ville fascine les caméras sans jamais se laisser apprivoiser. Aujourd'hui, l'État, les plateformes et les studios injectent des millions pour faire d'elle une fabrique à fictions. Mais Marseille n'est pas un algorithme : elle déborde, elle résiste, elle raconte. Une enquête entre rêve industriel et cinéma guérilla, sur ce que la ville peut vraiment dire au monde.",
       en: "Marseille isn't Hollywood; it's worse, it burns hotter. From Pagnol to Netflix, the city has always fascinated the camera without ever letting itself be tamed. Today, the State, the streaming giants and the studios are injecting millions to turn it into a fiction factory. But Marseille is no algorithm: it spills over, resists, tells its own stories. An investigation between industrial dream and guerrilla cinema, on what the city truly has to say to the world.",
@@ -41,18 +42,19 @@ export const films: Film[] = [
     slug: "madagascar-ia",
     title: "Madagascar : les petites mains de l'IA",
     year: "2024",
-    duration: "60 min",
+    duration: "25 min",
     synopsis: {
       fr: "À Madagascar, des milliers de travailleurs annotent les données qui entraînent les intelligences artificielles du monde entier.",
       en: "In Madagascar, thousands of workers label the data that trains artificial intelligence systems worldwide.",
     },
-    videoSrc: "/videos/madagascar-ia.mp4",
+    poster: "/films/madagascar-ia.jpg",
   },
   {
     slug: "maxime-frederic",
     title: "Maxime Frédéric : le chef du Cheval Blanc",
     year: "2025",
-    duration: "52 min",
+    duration: "14 min",
+    broadcaster: "M6",
     coproduction: "D18",
     synopsis: {
       fr: "Portrait du chef pâtissier le plus suivi de sa génération, sacré au sommet de la gastronomie française.",
@@ -64,18 +66,24 @@ export const films: Film[] = [
     slug: "chambon-sur-lignon",
     title: "Le Chambon-sur-Lignon, un legs pour l'Histoire",
     year: "2023",
-    duration: "75 min",
+    duration: "52 min",
+    broadcaster: "France 3",
+    director: "Jérôme Lévy",
+    coproduction: "Caméra Subjective",
     synopsis: {
       fr: "Récit du village qui a sauvé des milliers de Juifs pendant la Seconde Guerre mondiale, et de ce qu'il en reste aujourd'hui.",
       en: "The story of the village that saved thousands of Jews during World War II, and what remains today.",
     },
-    videoSrc: "/videos/chambon-sur-lignon.mp4",
+    poster: "/films/chambon-sur-lignon.jpg",
   },
   {
     slug: "surtourisme-provence",
     title: "Surtourisme : la Provence peut-elle accueillir toute la richesse du monde ?",
-    year: "2024",
-    duration: "60 min",
+    year: "2025",
+    duration: "52 min",
+    broadcaster: "France 3",
+    director: "Audrey Avram",
+    coproduction: "Cicada Production",
     synopsis: {
       fr: "Enquête sur les limites du modèle touristique provençal et les tensions qu'il génère sur les territoires.",
       en: "An investigation into the limits of the Provençal tourism model and the tensions it creates in local communities.",
@@ -186,6 +194,15 @@ export const directors: Director[] = [
     bio: {
       fr: "Réalisateur documentariste, Youcef Khemane développe des projets ancrés dans les réalités sociales et les récits de territoire.",
       en: "Documentary filmmaker, Youcef Khemane develops projects rooted in social realities and stories of place.",
+    },
+  },
+  {
+    slug: "mathieu-despiau",
+    name: "Mathieu Despiau",
+    photo: "/directors/mathieu-despiau.jpg",
+    bio: {
+      fr: "Réalisateur, Mathieu Despiau conçoit des documentaires mêlant enquête et récit, attentifs aux histoires humaines et aux territoires.",
+      en: "Director Mathieu Despiau crafts documentaries blending investigation and storytelling, attentive to human stories and places.",
     },
   },
 ];

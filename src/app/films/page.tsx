@@ -110,7 +110,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 function FilmRow({ film, index }: { film: Film; index: number }) {
   const { locale, t } = useI18n();
   const [videoFailed, setVideoFailed] = useState(false);
+  const [posterFailed, setPosterFailed] = useState(false);
   const isReversed = index % 2 === 1;
+
+  const showVideo = film.videoSrc && !videoFailed;
+  const showPoster = !showVideo && film.poster && !posterFailed;
 
   return (
     <article
@@ -119,7 +123,7 @@ function FilmRow({ film, index }: { film: Film; index: number }) {
     >
       <FadeIn className={isReversed ? "md:order-2" : ""} delay={0}>
         <div className="relative aspect-video bg-navy rounded-lg overflow-hidden">
-          {film.videoSrc && !videoFailed ? (
+          {showVideo ? (
             <video
               src={film.videoSrc}
               autoPlay
@@ -128,6 +132,13 @@ function FilmRow({ film, index }: { film: Film; index: number }) {
               playsInline
               preload="metadata"
               onError={() => setVideoFailed(true)}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : showPoster ? (
+            <img
+              src={film.poster}
+              alt={film.title}
+              onError={() => setPosterFailed(true)}
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (

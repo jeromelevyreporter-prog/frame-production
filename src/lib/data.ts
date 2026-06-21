@@ -51,8 +51,9 @@ export const films: Film[] = [
   {
     slug: "maxime-frederic",
     title: "Maxime Frédéric : le chef du Cheval Blanc",
-    year: "2024",
+    year: "2025",
     duration: "52 min",
+    coproduction: "D18",
     synopsis: {
       fr: "Portrait du chef pâtissier le plus suivi de sa génération, sacré au sommet de la gastronomie française.",
       en: "A portrait of the most-followed pastry chef of his generation, crowned at the summit of French gastronomy.",

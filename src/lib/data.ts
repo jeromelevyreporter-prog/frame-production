@@ -29,7 +29,7 @@ export const films: Film[] = [
   {
     slug: "bataille-de-marseille",
     title: "La Bataille de Marseille",
-    year: "2023",
+    year: "2026",
     duration: "90 min",
     broadcaster: "France 3",
     coproduction: "Nova Production",
@@ -42,8 +42,10 @@ export const films: Film[] = [
   {
     slug: "madagascar-ia",
     title: "Madagascar : les petites mains de l'IA",
-    year: "2024",
+    year: "2025",
     duration: "25 min",
+    broadcaster: "Arte",
+    director: "Jérôme Lévy",
     synopsis: {
       fr: "À Madagascar, des milliers de travailleurs annotent les données qui entraînent les intelligences artificielles du monde entier.",
       en: "In Madagascar, thousands of workers label the data that trains artificial intelligence systems worldwide.",
@@ -56,6 +58,7 @@ export const films: Film[] = [
     year: "2025",
     duration: "14 min",
     broadcaster: "M6",
+    director: "Jérôme Lévy",
     coproduction: "D18",
     synopsis: {
       fr: "Portrait du chef pâtissier le plus suivi de sa génération, sacré au sommet de la gastronomie française.",

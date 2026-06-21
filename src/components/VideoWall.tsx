@@ -42,7 +42,7 @@ const tiles: Tile[] = [
   {
     slug: "bataille-de-marseille",
     title: "La Bataille de Marseille",
-    year: "2023",
+    year: "2026",
     videoSrc: "/videos/bataille-de-marseille.mp4",
     span: "col-span-1 row-span-2 md:col-span-2 md:row-span-2",
     gradient: "linear-gradient(200deg, #131c33 0%, #a8c0dc 100%)",

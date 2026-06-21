@@ -130,9 +130,11 @@ function PressCard({ item }: { item: PressItem }) {
             {formatDate(item.date, locale)}
           </span>
         </div>
-        <h3 className="font-display text-xl md:text-2xl text-ink leading-tight mb-2 group-hover:text-red transition-colors">
-          {item.title}
-        </h3>
+        {item.title && (
+          <h3 className="font-display text-xl md:text-2xl text-ink leading-tight mb-2 group-hover:text-red transition-colors">
+            {item.title}
+          </h3>
+        )}
         {item.excerpt && (
           <p className="text-ink/70 text-sm leading-relaxed text-justify">
             {item.excerpt}

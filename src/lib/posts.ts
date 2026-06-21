@@ -168,7 +168,7 @@ export const pressItems: PressItem[] = [
     // ⚠️ À COMPLÉTER : remplir source, title et date (Jérôme passe les 10 premières minutes)
     source: "À compléter",
     format: "interview-tv",
-    title: "Interview de Jérôme Lévy",
+    title: "",
     date: "2026-04-29",
     url: "https://youtu.be/NanUfU-NNFc",
     videoEmbed: {
@@ -182,7 +182,7 @@ export const pressItems: PressItem[] = [
     // ⚠️ À COMPLÉTER : remplir source, title et date exacte
     source: "À compléter",
     format: "interview-tv",
-    title: "Intervention de Jérôme Lévy",
+    title: "",
     date: "2026-01-01",
     url: "https://www.youtube.com/watch?v=h35W8gAvp-M",
     videoEmbed: {
@@ -194,7 +194,7 @@ export const pressItems: PressItem[] = [
     // ⚠️ À COMPLÉTER : remplir source, title et date exacte
     source: "À compléter",
     format: "interview-tv",
-    title: "Intervention de Jérôme Lévy",
+    title: "",
     date: "2026-01-01",
     url: "https://www.youtube.com/watch?v=lL0QrmIFUI8",
     videoEmbed: {
@@ -206,7 +206,7 @@ export const pressItems: PressItem[] = [
     // ⚠️ À COMPLÉTER : remplir source, title et date exacte
     source: "À compléter",
     format: "interview-tv",
-    title: "Intervention de Jérôme Lévy",
+    title: "",
     date: "2026-01-01",
     url: "https://www.youtube.com/watch?v=3hgijgdMHns",
     videoEmbed: {

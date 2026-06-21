@@ -126,7 +126,7 @@ export const projects: Project[] = [
     status: "développement",
     genre: "Enquête",
     year: "2026",
-    photo: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80",
+    photo: "/films/face-cachee-ia.jpg",
     synopsis: {
       fr: "Derrière l'apparente magie des intelligences artificielles génératives se cache une chaîne industrielle invisible : data centers énergivores, travailleurs du clic sous-payés dans le Sud, captation massive de données, modèles entraînés sur le travail d'autrui. Ce documentaire enquête sur ce que coûte vraiment l'IA, humainement, écologiquement et politiquement, et sur ceux qui paient pour notre confort numérique.",
       en: "Behind the apparent magic of generative AI lies an invisible industrial chain: energy-hungry data centers, underpaid click workers in the Global South, mass data harvesting, models trained on others' labor. This documentary investigates the true cost of AI, humanly, ecologically and politically, and those who pay for our digital comfort.",

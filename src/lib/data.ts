@@ -32,9 +32,10 @@ export const films: Film[] = [
     year: "2023",
     duration: "90 min",
     broadcaster: "France 3",
+    coproduction: "Nova Production",
     synopsis: {
-      fr: "Plongée dans une ville en mutation, entre violence, politique et réinvention urbaine.",
-      en: "An immersion in a city in transformation, between violence, politics and urban reinvention.",
+      fr: "Plongée au cœur des élections municipales de Marseille, entre ambitions, alliances et batailles de terrain pour conquérir la deuxième ville de France.",
+      en: "An immersion in Marseille's municipal elections, between ambitions, alliances and grassroots battles to win France's second-largest city.",
     },
     videoSrc: "/videos/bataille-de-marseille.mp4",
   },

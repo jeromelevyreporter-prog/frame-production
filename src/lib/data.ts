@@ -19,7 +19,7 @@ export const films: Film[] = [
     duration: "52 min",
     broadcaster: "France 3 PACA",
     director: "Audrey Avram",
-    coproduction: "Nova Production",
+    coproduction: "Amda Production",
     synopsis: {
       fr: "Marseille n'est pas Hollywood. C'est pire. C'est plus brûlant. Depuis Pagnol jusqu'à Netflix, la ville fascine les caméras sans jamais se laisser apprivoiser. Aujourd'hui, l'État, les plateformes et les studios injectent des millions pour faire d'elle une fabrique à fictions. Mais Marseille n'est pas un algorithme : elle déborde, elle résiste, elle raconte. Une enquête entre rêve industriel et cinéma guérilla, sur ce que la ville peut vraiment dire au monde.",
       en: "Marseille isn't Hollywood; it's worse, it burns hotter. From Pagnol to Netflix, the city has always fascinated the camera without ever letting itself be tamed. Today, the State, the streaming giants and the studios are injecting millions to turn it into a fiction factory. But Marseille is no algorithm: it spills over, resists, tells its own stories. An investigation between industrial dream and guerrilla cinema, on what the city truly has to say to the world.",

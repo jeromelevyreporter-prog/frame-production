@@ -43,6 +43,18 @@ const locations = [
     coordinates: [-118.24, 34.05] as [number, number],
     films: ["DOC LA 2026 · Sélection officielle"],
   },
+  {
+    name: "Dakar",
+    country: "Sénégal",
+    coordinates: [-17.44, 14.69] as [number, number],
+    films: [],
+  },
+  {
+    name: "New York",
+    country: "États-Unis",
+    coordinates: [-74.0, 40.71] as [number, number],
+    films: [],
+  },
 ];
 
 export function WorldMap() {

@@ -56,7 +56,6 @@ export default function ContactPage() {
               >
                 contact@frameproduction.fr
               </a>
-              <p className="text-ink/60 text-sm mt-2">+33 6 10 84 69 46</p>
             </FadeIn>
 
             <FadeIn delay={0.1}>
@@ -219,11 +218,6 @@ export default function ContactPage() {
                 <p>
                   <a href="mailto:jerome.levy@frameproduction.fr" className="hover:text-red transition-colors">
                     jerome.levy@frameproduction.fr
-                  </a>
-                </p>
-                <p>
-                  <a href="tel:+33610846946" className="hover:text-red transition-colors">
-                    +33 6 10 84 69 46
                   </a>
                 </p>
               </div>
